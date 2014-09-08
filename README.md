@@ -7,6 +7,8 @@ This is a javascript app to show your Google location history on a heatmap.
 Using it
 --------
 
+The app runs in your browser but it's intended to be run on a local server, since the location history file can be upwards of 100MB (and besides, you probably don't want to share it).
+
 - Clone this repo somewhere.
 
 - Grab your location history using [Takeout](https://www.google.com/settings/takeout) as a `.zip`. Pull the `LocationHistory.json` file out of there and move it into the project's root directory, wherever you cloned it.
