@@ -1,0 +1,12 @@
+{
+  "name": "locationheatmap",
+  "version": "0.1.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
