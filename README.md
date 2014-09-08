@@ -14,3 +14,9 @@ Using it
 - Run `python -m SimpleHTTPServer <port number>` in the root directory of the project
 
 - Go to `http://localhost:<port number>` in your web browser. It might take a little while to load and then render the data if you have a lot of location history.
+
+
+License
+-------
+
+MIT
