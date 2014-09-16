@@ -45,25 +45,50 @@ $.getJSON( "LocationHistory.json", function( data ) {
   heatmap.set('gradient', gradient);
 
   $('#loader').toggle();
+
+  map.setCenter(getCentroid(locationData));
+
 });
 
+function getCentroid(latLngs) {
+
+  var lng = 0;
+  var lat = 0;
+
+  for(i = 0; i < latLngs.length; i++) {
+    lng += latLngs[i].lng();
+    lat += latLngs[i].lat();
+  }
+
+  lng /= latLngs.length;
+  lat /= latLngs.length;
+
+  return new google.maps.LatLng(lat, lng);
+
+}
+
 function initialize() {
+
   var mapOptions = {
     zoom: 7,
     center: new google.maps.LatLng(52, -0.4)
   };
 
   map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
+                            mapOptions);
 
 }
 
 function toggleHeatmap() {
+
   heatmap.setMap(heatmap.getMap() ? null : map);
+
 }
 
 function changeOpacity() {
+
   heatmap.set('opacity', heatmap.get('opacity') ? null : 0.2);
+
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
