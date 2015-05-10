@@ -15,7 +15,7 @@ I'll assume working installs of bower and python.
 
 - Run `bower install`
 
-- Grab your location history using [Takeout](https://www.google.com/settings/takeout) as a `.zip`. Pull the `LocationHistory.json` file out of there and move it into the project's root directory, wherever you cloned it.
+- Grab your location history using [Takeout](https://www.google.com/settings/takeout) as a `.zip`. Make sure to choose the JSON format. Pull `LocationHistory.json` out of the archive and move it into the project's root directory, wherever you cloned it. `LocationHistory.json` is in the `.gitignore` so you don't accidentally upload it.
 
 - Run `python -m SimpleHTTPServer <port number>` in the root directory of the project
 
